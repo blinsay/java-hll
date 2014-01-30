@@ -62,19 +62,19 @@ import net.agkn.hll.util.NumberUtil;
 public class HLL {
     // minimum and maximum values for the log-base-2 of the number of registers
     // in the HLL
-    private static final int MINIMUM_LOG2M_PARAM = 4;
-    private static final int MAXIMUM_LOG2M_PARAM = 30;
+    public static final int MINIMUM_LOG2M_PARAM = 4;
+    public static final int MAXIMUM_LOG2M_PARAM = 30;
 
     // minimum and maximum values for the register width of the HLL
-    private static final int MINIMUM_REGWIDTH_PARAM = 1;
-    private static final int MAXIMUM_REGWIDTH_PARAM = 8;
+    public static final int MINIMUM_REGWIDTH_PARAM = 1;
+    public static final int MAXIMUM_REGWIDTH_PARAM = 8;
 
     // minimum and maximum values for the 'expthresh' parameter of the
     // constructor that is meant to match the PostgreSQL implementation's
     // constructor and parameter names
-    private static final int MINIMUM_EXPTHRESH_PARAM = -1;
-    private static final int MAXIMUM_EXPTHRESH_PARAM = 18;
-    private static final int MAXIMUM_EXPLICIT_THRESHOLD = (1 << (MAXIMUM_EXPTHRESH_PARAM - 1)/*per storage spec*/);
+    public static final int MINIMUM_EXPTHRESH_PARAM = -1;
+    public static final int MAXIMUM_EXPTHRESH_PARAM = 18;
+    public static final int MAXIMUM_EXPLICIT_THRESHOLD = (1 << (MAXIMUM_EXPTHRESH_PARAM - 1)/*per storage spec*/);
 
     // ************************************************************************
     // Storage
