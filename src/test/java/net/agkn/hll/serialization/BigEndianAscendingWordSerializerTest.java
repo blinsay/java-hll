@@ -37,7 +37,7 @@ public class BigEndianAscendingWordSerializerTest {
     public void constructorErrorTest() {
         // word length too small
         try {
-            new BigEndianAscendingWordSerializer(4/*wordLength, below minimum of 5*/, 1/*wordCount, arbitrary*/, 0/*bytePadding, arbitrary*/);
+            new BigEndianAscendingWordSerializer(0/*wordLength, below minimum of 4*/, 1/*wordCount, arbitrary*/, 0/*bytePadding, arbitrary*/);
             fail("Should complain about too-short words.");
         } catch(final IllegalArgumentException e) {
             assertTrue(e.getMessage().contains("Word length must be"));

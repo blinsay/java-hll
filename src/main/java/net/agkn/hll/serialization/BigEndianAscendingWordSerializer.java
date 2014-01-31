@@ -73,14 +73,14 @@ public class BigEndianAscendingWordSerializer implements IWordSerializer {
      *        serialized words. Must be greater than or equal to zero.
      */
     public BigEndianAscendingWordSerializer(final int wordLength, final int wordCount, final int bytePadding) {
-        if((wordLength < 5) || (wordLength > 64)) {
-            throw new IllegalArgumentException("Word length must be larger than 4 and less than or equal to 64. (was: " + wordLength + ")");
+        if((wordLength < 1) || (wordLength > 64)) {
+            throw new IllegalArgumentException("Word length must be >= 1 and <= 64. (was: " + wordLength + ")");
         }
         if(wordCount < 0) {
-            throw new IllegalArgumentException("Word count must be greater than or equal to zero. (was: " + wordCount + ")");
+            throw new IllegalArgumentException("Word count must be >= 0. (was: " + wordCount + ")");
         }
         if(bytePadding < 0) {
-            throw new IllegalArgumentException("Byte padding must be greater than or equal to zero. (was: " + bytePadding + ")");
+            throw new IllegalArgumentException("Byte padding must be must be >= 0. (was: " + bytePadding + ")");
         }
 
         this.wordLength = wordLength;
